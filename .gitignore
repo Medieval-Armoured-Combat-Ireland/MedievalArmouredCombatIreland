@@ -1,0 +1,12 @@
+.pem
+.env
+.idea
+.vscode
+dist
+node_modules
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+/mack-the-maci-bot/.idea/
+/mack-the-maci-bot/*.env
+/mack-the-maci-bot/*.pem
