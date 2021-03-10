@@ -1,21 +1,37 @@
-import React, {CSSProperties} from 'react';
 import {Menu} from 'antd';
-import {Link} from 'react-router-dom';
 import {Header} from 'antd/es/layout/layout';
+import React, {CSSProperties} from 'react';
+import {Link} from 'react-router-dom';
 
 export const MaciNavbar = (): React.ReactElement => {
     const style: CSSProperties = {
         position: 'absolute',
         top: 0,
         width: '100%',
-        zIndex: 100
+        zIndex: 100,
+    };
+    const routes: Array<any> = [{key: 'home', route: '/', label: 'Home'}];
+
+    function buildRoutes(): Array<any> {
+        const builtRoutes: Array<any> = [];
+        for (const route of routes) {
+            builtRoutes.push(
+                <Menu.Item
+                    key={route.key}
+                    className='className="typography__header--regular"'
+                >
+                    <Link to={route.route}>{route.label}</Link>
+                </Menu.Item>,
+            );
+        }
+        return builtRoutes;
     }
-    const routes = [
-        <Menu.Item key="1"> <Link to='/'>Home</Link></Menu.Item>,
-    ];
+
     return (
         <Header style={style}>
-            <Menu mode='horizontal' theme="dark" defaultSelectedKeys={['1']}>{routes}</Menu>
+            <Menu mode="horizontal" theme="dark" defaultSelectedKeys={['home']}>
+                {buildRoutes()}
+            </Menu>
         </Header>
     );
 };

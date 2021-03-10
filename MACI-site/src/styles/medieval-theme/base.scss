@@ -1,5 +1,3 @@
 @import "variables/variables";
-
-#root, app, main, div {
-  background-color: $parchment;
-}
+@import "typography/typography";
+@import "components/components";
