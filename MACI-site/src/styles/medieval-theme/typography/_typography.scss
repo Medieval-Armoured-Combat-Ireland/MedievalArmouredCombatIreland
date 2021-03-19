@@ -48,7 +48,6 @@ $montserrat-italic: 'Montserrat-Italic', sans-serif;
 
 $tangerine-regular: 'Tangerine-Regular', cursive;
 $tangerine-bold: 'Tangerine-Bold', cursive;
-
 .typography {
   &__body {
     &--regular {
@@ -87,4 +86,21 @@ $tangerine-bold: 'Tangerine-Bold', cursive;
       font-family: $tangerine-bold;
     }
   }
+
+  &__colour {
+    color: $medium;
+
+    &--dark {
+      color: $dark;
+    }
+
+    &--medium {
+      color: $medium;
+    }
+
+    &--parchment-dark {
+      color: $parchment-dark
+    }
+  }
 }
+

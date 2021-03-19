@@ -10,7 +10,7 @@ export const MaciNavbar = (): React.ReactElement => {
         width: '100%',
         zIndex: 100,
     };
-    const routes: Array<any> = [{key: 'home', route: '/', label: 'Home'}];
+    const routes: Array<any> = [{key: 'home', route: '/', label: 'Home'},{key: 'Demo', route: '/demo-page', label: 'Demo'}];
 
     function buildRoutes(): Array<any> {
         const builtRoutes: Array<any> = [];
