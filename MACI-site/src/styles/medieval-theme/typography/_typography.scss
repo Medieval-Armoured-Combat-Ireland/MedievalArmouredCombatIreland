@@ -48,7 +48,9 @@ $montserrat-italic: 'Montserrat-Italic', sans-serif;
 
 $tangerine-regular: 'Tangerine-Regular', cursive;
 $tangerine-bold: 'Tangerine-Bold', cursive;
-.typography {
+
+
+.text {
   &__body {
     &--regular {
       font-family: $montserrat-regular;
@@ -88,8 +90,6 @@ $tangerine-bold: 'Tangerine-Bold', cursive;
   }
 
   &__colour {
-    color: $medium;
-
     &--dark {
       color: $dark;
     }

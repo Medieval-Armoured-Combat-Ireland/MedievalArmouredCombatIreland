@@ -10,7 +10,10 @@ export const MaciNavbar = (): React.ReactElement => {
         width: '100%',
         zIndex: 100,
     };
-    const routes: Array<any> = [{key: 'home', route: '/', label: 'Home'},{key: 'Demo', route: '/demo-page', label: 'Demo'}];
+    const routes: Array<any> = [
+        {key: 'home', route: '/', label: 'Home'},
+        {key: 'Demo', route: '/demo-page', label: 'Demo'},
+    ];
 
     function buildRoutes(): Array<any> {
         const builtRoutes: Array<any> = [];
@@ -18,7 +21,7 @@ export const MaciNavbar = (): React.ReactElement => {
             builtRoutes.push(
                 <Menu.Item
                     key={route.key}
-                    className='className="typography__header--regular"'
+                    className='className="text__header--regular"'
                 >
                     <Link to={route.route}>{route.label}</Link>
                 </Menu.Item>,

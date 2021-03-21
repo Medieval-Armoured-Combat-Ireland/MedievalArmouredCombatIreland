@@ -22,10 +22,7 @@ export const MaciFooter = (): React.ReactElement => {
         const builtRoutes: Array<any> = [];
         for (const route of routes) {
             builtRoutes.push(
-                <Menu.Item
-                    key={route.key}
-                    className='className="typography__header--regular"'
-                >
+                <Menu.Item key={route.key} className="text__header--regular">
                     <Link to={route.route}>{route.label}</Link>
                 </Menu.Item>,
             );
