@@ -4,12 +4,6 @@ import React, {CSSProperties} from 'react';
 import {Link} from 'react-router-dom';
 
 export const MaciNavbar = (): React.ReactElement => {
-    const style: CSSProperties = {
-        position: 'absolute',
-        top: 0,
-        width: '100%',
-        zIndex: 100,
-    };
     const routes: Array<any> = [
         {key: 'home', route: '/', label: 'Home'},
         {key: 'Demo', route: '/demo-page', label: 'Demo'},
@@ -31,7 +25,7 @@ export const MaciNavbar = (): React.ReactElement => {
     }
 
     return (
-        <Header style={style}>
+        <Header className="navbar">
             <Menu mode="horizontal" theme="dark" defaultSelectedKeys={['home']}>
                 {buildRoutes()}
             </Menu>
