@@ -1,0 +1,20 @@
+
+$colours: (
+    papyrus-dark: #bd8d4c,
+    papyrus-light: #F2E0C8,
+    black: black,
+    offWhite: white,
+    azureBlue: #00005c
+);
+
+@each $color, $value in $colours {
+    .-#{$color} {
+        &__text {
+            color: $value;
+        }
+        &__background {
+            background-color: $value;
+        }
+      }
+      
+}

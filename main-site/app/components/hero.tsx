@@ -3,6 +3,24 @@ import { Spectral_SC } from 'next/font/google';
 import React from 'react';
 import bg from '../../public/img.jpg';
 import { ShieldButton } from './shield-button';
+import { faDiscord, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
+// [REVIEW] move to util file ? - overkill ?
+const navButtonClick = (navLink: string): void => {
+  if (typeof window !== 'undefined') {
+    window?.open(navLink, '_blank', 'noreferrer')?.focus();
+  }
+};
+
+const mailToButtonClick = (mail: string): void => {
+  if (typeof window !== 'undefined') {
+    window?.open(`mailto:${mail}`, '_blank', 'noreferrer')?.focus();
+  }
+};
+
+// [END REVIEW]
+
 const spectral = Spectral_SC({
   weight: '500',
   style: 'normal',
@@ -13,6 +31,7 @@ const heroTextStyle = {
 };
 
 const heroImageStyle = {
+  paddingTop: '40%',
   backgroundPosition: '50%',
   backgroundImage: `url(${bg.src})`,
   height: '500px',
@@ -24,7 +43,7 @@ const heroBgStyle = {
 
 export function Hero() {
   return (
-    <section className="mb-40" style={heroTextStyle}>
+    <section className="mb-auto" style={heroTextStyle}>
       <div
         className="relative overflow-hidden bg-no-repeat bg-cover"
         style={heroImageStyle}
@@ -35,12 +54,37 @@ export function Hero() {
         >
           <div className="flex justify-center items-center h-full">
             <div className="text-center text-white px-6 md:px-12">
-              <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">
+              <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12 outline-text -papyrus-dark__text">
                 Medieval Armoured Combat
                 <br />
                 <span>Ireland</span>
               </h1>
-              <ShieldButton text="Socials" />
+              <div className="flex justify-center items-center h-full">
+                <ShieldButton
+                  text="Socials"
+                  height="70"
+                  width="70"
+                  icon={faDiscord}
+                  callBack={navButtonClick}
+                  params="https://discord.gg/dH6KhHCeQQ"
+                />
+                <ShieldButton
+                  text="Socials"
+                  height="70"
+                  width="70"
+                  icon={faFacebook}
+                  callBack={navButtonClick}
+                  params="https://www.facebook.com/Irishcombat/"
+                />
+                <ShieldButton
+                  text="Socials"
+                  height="70"
+                  width="70"
+                  icon={faEnvelope}
+                  callBack={mailToButtonClick}
+                  params="armouredcombatireland@gmail.com"
+                />
+              </div>
             </div>
           </div>
         </div>

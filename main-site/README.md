@@ -20,6 +20,17 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Style Guide / Convention
+
+### SCSS
+
+ - Keep as much of the styling in the component files as possible.
+ - Use Tailwind first
+ - Animation go in file related to the component they style e.g button animations in button partial
+ - Use BEM
+ - Reusable styles go in SCSS.
+ - Colours go int the _colours file array, this auto creates classes for them.
+----
 ## About Next.js
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
