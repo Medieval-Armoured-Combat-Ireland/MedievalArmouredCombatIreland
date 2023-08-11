@@ -24,13 +24,15 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ### SCSS
 
- - Keep as much of the styling in the component files as possible.
- - Use Tailwind first
- - Animation go in file related to the component they style e.g button animations in button partial
- - Use BEM
- - Reusable styles go in SCSS.
- - Colours go int the _colours file array, this auto creates classes for them.
-----
+- Keep as much of the styling in the component files as possible.
+- Use Tailwind first
+- Animation go in file related to the component they style e.g button animations in button partial
+- Use BEM
+- Reusable styles go in SCSS.
+- Colours go int the \_colours file array, this auto creates classes for them.
+
+---
+
 ## About Next.js
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

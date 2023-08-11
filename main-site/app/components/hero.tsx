@@ -1,10 +1,10 @@
 'use client';
-import { Spectral_SC } from 'next/font/google';
 import React from 'react';
 import bg from '../../public/img.jpg';
 import { ShieldButton } from './shield-button';
 import { faDiscord, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { spectral } from '../styles/font';
 
 // [REVIEW] move to util file ? - overkill ?
 const navButtonClick = (navLink: string): void => {
@@ -21,11 +21,6 @@ const mailToButtonClick = (mail: string): void => {
 
 // [END REVIEW]
 
-const spectral = Spectral_SC({
-  weight: '500',
-  style: 'normal',
-  subsets: ['latin'],
-});
 const heroTextStyle = {
   ...spectral.style,
 };
