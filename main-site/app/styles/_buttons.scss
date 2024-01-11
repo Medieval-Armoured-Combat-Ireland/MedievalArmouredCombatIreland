@@ -1,0 +1,44 @@
+@import './colours';
+.shield-button {
+    @keyframes swordAnim {
+      from {
+        transform: translate(478px, 300px) rotate(180deg);
+      }
+      to {
+        transform: translate(478px, 430px) rotate(180deg);
+      }
+    }
+    @keyframes buttonAnim {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: rotate(2deg);
+        }
+        100% {
+          transform: scale(1.2);
+        }
+    }
+
+    g{
+      display: inline-block;
+      visibility: hidden;
+      scale:(1 0.7);
+    }
+    &:hover{
+      .shield {
+        fill: map-get($colours, 'offWhite' );
+      }
+      .shield-button-icon {
+        > path {
+          fill: map-get($colours, 'azureBlue' );
+        }
+    
+      }
+       animation: buttonAnim 0.3s 1 ease-in-out forwards; 
+       g {
+          visibility: visible;
+          animation: swordAnim 0.5s 1 ease-in-out forwards;
+        }
+    }
+}
