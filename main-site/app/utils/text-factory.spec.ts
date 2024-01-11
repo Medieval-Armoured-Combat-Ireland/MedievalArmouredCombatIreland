@@ -5,14 +5,12 @@ import { promises as fs } from 'fs';
 const textFactory = new TextFactory();
 
 describe('TextFactory', () => {
-    
     beforeEach(() => {
         jest.clearAllMocks();
         jest.resetModules();
     });
-    
-    describe('loadTextFromFile', () => {
 
+    describe('loadTextFromFile', () => {
         it('should load a text file from the file system and convert it to html', async () => {
             const filePath = 'some-file-path';
             const fileContents = 'some-file-contents';
@@ -24,7 +22,5 @@ describe('TextFactory', () => {
             expect(path.join).toHaveBeenCalledWith(process.cwd(), filePath);
             expect(fs.readFile).toHaveBeenCalledWith(filePath, 'utf8');
         });
-
     });
-
 });

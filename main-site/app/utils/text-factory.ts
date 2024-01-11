@@ -6,13 +6,12 @@ import showdown from 'showdown';
  * Class that conatains reusable fucntions for text manipulation
  */
 export default class TextFactory {
-
     /**
      * Loads a text file from the file system and converts it to html
      * This allows us to have rudementary localisation support as well as
      * keeping the component and page files cleaner.
-     * 
-     * @param {string} filePath - The path to the text file 
+     *
+     * @param {string} filePath - The path to the text file
      * @returns {Promise<string} - The text file converted to html
      */
     public async loadTextFromFile(filePath: string): Promise<string> {
@@ -22,5 +21,4 @@ export default class TextFactory {
         const textHtml = converter.makeHtml(fileContents);
         return textHtml;
     }
-
 }
