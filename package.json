@@ -64,6 +64,7 @@
     "@angular/platform-server": "~17.1.0",
     "@angular/router": "~17.1.0",
     "@angular/ssr": "~17.1.0",
+    "@bijection/smoke": "^1.0.2",
     "@fortawesome/angular-fontawesome": "^0.14.1",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
