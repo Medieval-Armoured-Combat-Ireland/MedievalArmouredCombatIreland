@@ -41,7 +41,7 @@
           <li class="mb-2 lg:mb-0" data-te-nav-item-ref>
             <a
               class="block py-2 pr-2 text-neutral-900 transition duration-150 ease-in-out hover:text-neutral-800 focus:text-neutral-800 disabled:text-black/30 dark:text-neutral-800 dark:hover:text-neutral-300 dark:focus:text-neutral-600 dark:disabled:text-black/30 lg:px-2 [&.active]:text-black/80 dark:[&.active]:text-black/80"
-              href="#!"
+              href="#clubs"
               data-te-nav-link-ref
               data-te-ripple-init
               data-te-ripple-color="dark"
@@ -51,7 +51,7 @@
           <li class="mb-2 lg:mb-0" data-te-nav-item-ref>
             <a
               class="block py-2 pr-2 text-neutral-900 transition duration-150 ease-in-out hover:text-neutral-800 focus:text-neutral-800 disabled:text-black/30 dark:text-neutral-800 dark:hover:text-neutral-300 dark:focus:text-neutral-600 dark:disabled:text-black/30 lg:px-2 [&.active]:text-black/80 dark:[&.active]:text-black/80"
-              href="#!"
+              href="#contact"
               data-te-nav-link-ref
               data-te-ripple-init
               data-te-ripple-color="dark"
@@ -126,8 +126,8 @@
               About us
             </h2>
             <p class="mb-6 text-neutral-800 dark:text-neutral-800">
-              We are a Medieval Armoured Combat Ireland the governing body for
-              the sport of medieval armoured combat in Ireland.
+              We are Medieval Armoured Combat Ireland the governing body for the
+              sport of medieval armoured combat in Ireland.
             </p>
           </div>
         </div>
@@ -143,10 +143,62 @@
     <div
       class="container my-24 mx-auto md:px-6 content-center flex flex-wrap items-center text-center"
     >
-      <h2 class="mb-4 text-4xl font-bold text-neutral-300 w-full" id="clubs ">
-        Our Clubs
+      <h2 class="mb-4 text-4xl font-bold text-neutral-300 w-full" id="clubs">
+        Clubs
       </h2>
       <app-map class="w-full"></app-map>
     </div>
   </section>
 </div>
+
+<div class="container my-24 mx-auto md:px-6">
+  <section class="mb-32">
+    <div class="flex h-full items-center justify-center">
+      <div class="px-6 text-center text-white md:px-12">
+        <h5
+          class="mt-2 text-1xl font-bold tracking-tight md:text-1xl xl:text-2xl"
+          id="contact"
+        >
+          Contact us
+        </h5>
+        <p class="mb-4 text">For all media and events enquiries</p>
+        <div class="flex h-full items-center justify-center">
+          <a
+            [href]="emailUrl"
+            class="bg-slate-700 text-white py-2 px-4 rounded hover:bg-slate-900 mx-5"
+          >
+            Email
+          </a>
+          <a
+            [href]="facebookUrl"
+            class="bg-slate-700 text-white py-2 px-4 rounded hover:bg-slate-900 mx-5"
+          >
+            Facebook
+          </a>
+          <a
+            [href]="discordUrl"
+            class="bg-slate-700 text-white py-2 px-4 rounded hover:bg-slate-900 mx-5"
+          >
+            Discord
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<footer class="bg-neutral-200 text-center dark:bg-neutral-700 lg:text-left">
+  <div class="p-4 text-center text-neutral-700 dark:text-neutral-200">
+    © 2024 Copyright:
+    <a
+      class="text-neutral-800 dark:text-neutral-400"
+      href="https://www.armouredcombat.ie/"
+      >Medieval Armoured Combat Ireland</a
+    >
+    <br />
+    <a
+      class="text-neutral-800 dark:text-neutral-400"
+      href="mailto:lukecaptain@hotmail.com"
+      >Site built by: Luke Captain</a
+    >
+  </div>
+</footer>

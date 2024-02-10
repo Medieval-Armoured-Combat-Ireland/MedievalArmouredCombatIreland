@@ -15,8 +15,12 @@ svg {
 .info {
     pointer-events: none;
     display: none;
+    h1{
+        font-size: 1rem;
+    }
     >div {
         background-color: map-get($colours, papyrus-darker);
+        padding: 5px;
         animation: appear 1000ms forwards;
         z-index: 1000;
         pointer-events: all;

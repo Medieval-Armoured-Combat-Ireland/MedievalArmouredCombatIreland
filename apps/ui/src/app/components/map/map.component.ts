@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { faLocationPin } from '@fortawesome/free-solid-svg-icons';
+import { faLocationPin, faLink } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
@@ -12,6 +12,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 })
 export class MapComponent {
   mapPin = faLocationPin;
+  link = faLink;
 
   toggle(location: string) {
     const div = document.getElementById(location) as HTMLDivElement;

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:ui": "nx serve ui --host 0.0.0.0 --poll 1000 --port 4200"
+    "start:ui": "nx serve ui --host 0.0.0.0 --poll 1000 --port 4200",
+    "build:ui": "nx build ui"
   },
   "author": "",
   "license": "ISC",

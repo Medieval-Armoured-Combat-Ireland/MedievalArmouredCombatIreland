@@ -24,7 +24,8 @@
 				"esbenp.prettier-vscode",
 				"bradlc.vscode-tailwindcss",
 				"oderwat.indent-rainbow",
-				"dzhavat.bracket-pair-toggler"
+				"dzhavat.bracket-pair-toggler",
+				"techer.open-in-browser"
 			]
 		}
 	}

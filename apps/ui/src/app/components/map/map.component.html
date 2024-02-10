@@ -1,4 +1,4 @@
-<svg width="908" height="1159" version="1.0">
+<svg version="1.0" viewBox="0 0 900 1200">
   <defs id="defs2002" />
   <path
     style="fill: #bd8d4c; fill-opacity: 1"
@@ -12,6 +12,7 @@
     height="60"
     class="ico-hover athenry-pin"
     (mouseenter)="toggle('1316')"
+    (pointerenter)="toggle('1316')"
   >
     <fa-icon [icon]="mapPin" style="font-size: 3rem"></fa-icon>
   </foreignObject>
@@ -23,6 +24,7 @@
     height="60"
     class="ico-hover"
     (mouseenter)="toggle('fragarach')"
+    (pointerenter)="toggle('fragarach')"
   >
     <fa-icon [icon]="mapPin" style="font-size: 3rem"></fa-icon>
   </foreignObject>
@@ -34,6 +36,7 @@
     height="60"
     class="ico-hover"
     (mouseenter)="toggle('knights-of-munster')"
+    (pointerenter)="toggle('knights-of-munster')"
   >
     <fa-icon [icon]="mapPin" style="font-size: 3rem"></fa-icon>
   </foreignObject>
@@ -41,31 +44,49 @@
   <foreignObject
     x="325"
     y="540"
-    width="300"
+    width="200"
     height="100"
     id="1316"
     class="info"
   >
-    <div><h1>1316</h1></div>
+    <div>
+      <h1><b>1316</b></h1>
+      Athenry<br />
+      <a href="https://www.facebook.com/1316mfc" target="_blank"
+        ><fa-icon [icon]="link" style="font-size: 1rem"></fa-icon>Contact us</a
+      >
+    </div>
   </foreignObject>
   <foreignObject
     x="700"
     y="520"
-    width="300"
+    width="200"
     height="100"
     id="fragarach"
     class="info"
   >
-    <div><h1>Fragarach</h1></div>
+    <div>
+      <h1><b>Fragarach</b></h1>
+      Dublin City<br />
+      <a href="https://fragarach.ie/" target="_blank">
+        <fa-icon [icon]="link" style="font-size: 1rem"></fa-icon>Contact us</a
+      >
+    </div>
   </foreignObject>
   <foreignObject
     x="360"
     y="970"
-    width="300"
+    width="260"
     height="100"
     id="knights-of-munster"
     class="info"
   >
-    <div><h1>The Knights of Munster</h1></div>
+    <div>
+      <h1><b>The Knights of Munster</b></h1>
+      Cork City <br />
+      <a href="mailto:knightsofmunster@gmail.com" target="_blank"
+        ><fa-icon [icon]="link" style="font-size: 1rem"></fa-icon>Contact us</a
+      >
+    </div>
   </foreignObject>
 </svg>
