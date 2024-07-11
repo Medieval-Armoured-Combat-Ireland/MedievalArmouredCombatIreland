@@ -10,16 +10,3 @@
     ]
   }
 }
-{
-  "extends": "./tsconfig.json",
-  "include": [
-    "src/**/*.ts",
-    "decs.d.ts"
-  ],
-  "compilerOptions": {
-    "types": [
-      "jest",
-      "node"
-    ]
-  }
-}
