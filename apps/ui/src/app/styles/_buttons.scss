@@ -1,6 +1,10 @@
 @import './colours';
 
 .shield-button {
+  height: 7rem;
+  width: 7rem;
+  cursor: pointer;
+
   @keyframes swordAnim {
     from {
       transform: translate(478px, 300px) rotate(180deg);
@@ -37,10 +41,9 @@
     }
 
     .shield-button-icon {
-      >path {
-        fill: map-get($colours, 'azureBlue');
+      path {
+        fill: map-get($colours, 'azureBlue') !important;
       }
-
     }
 
     animation: buttonAnim 0.3s 1 ease-in-out forwards;

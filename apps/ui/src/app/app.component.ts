@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ShieldButtonComponent } from './components/shield-button/shield-button.component';
+import { HomeComponent } from './home/home.component';
 
 @Component({
   standalone: true,
-  imports: [ShieldButtonComponent, RouterModule],
+  imports: [HomeComponent, RouterModule],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'ui';
+  title = 'Medieval Armoured Combat Ireland';
 }

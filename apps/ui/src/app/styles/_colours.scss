@@ -1,19 +1,20 @@
 $colours: (
     papyrus-dark: #bd8d4c,
+    papyrus-darker: #4e412e,
     papyrus-light: #F2E0C8,
-    black: black,
-    offWhite: white,
+    black: #000,
+    offWhite: #fff,
     azureBlue: #00005c
 );
-
+// Important to override tailwindcss
 @each $color, $value in $colours {
     .-#{$color} {
         &__text {
-            color: $value;
+            color: $value!important;
         }
 
         &__background {
-            background-color: $value;
+            background-color: $value!important;
         }
     }
 

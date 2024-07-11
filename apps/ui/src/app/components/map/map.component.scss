@@ -1,0 +1,29 @@
+@import '../../styles/all';
+svg {
+    margin: auto;
+}
+.ico-hover:hover {
+    animation: bounce 2.5s infinite; //other browsers
+    -webkit-animation: bounce 2.5s infinite; //webkit browsers
+    -moz-animation: bounce 2.5s infinite; //firefox
+    -o-animation: bounce 2.5s infinite; //opera
+}       
+@keyframes appear {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  } 
+.info {
+    pointer-events: none;
+    display: none;
+    h1{
+        font-size: 1rem;
+    }
+    >div {
+        background-color: map-get($colours, papyrus-darker);
+        padding: 5px;
+        animation: appear 1000ms forwards;
+        z-index: 1000;
+        pointer-events: all;
+    }
+
+}

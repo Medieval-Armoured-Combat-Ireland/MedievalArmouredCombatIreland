@@ -1,26 +1,27 @@
 .container {
     position: 'relative';
-    height: '80px';
-    width: '80px';
+    height: inherit;
+    width: inherit;
     font-size: '1rem';
+
 }
 
 .shield {
-    height: '80px';
-    width: '80px';
+    height: inherit;
+    width: inherit;
     position: 'absolute';
 }
 
 .sword {
-    height: '80px';
-    width: '80px';
+    height: inherit;
+    width: inherit;
     position: 'absolute';
     z-index: 2;
 }
 
 .icon-style {
-    // fontSize: `${parseInt(props.height as string) / 2.5}px`,
-    font-size: '1rem';
+    position: absolute;
+    font-size: 2rem;
     z-index: 10;
     color: 'white';
 }

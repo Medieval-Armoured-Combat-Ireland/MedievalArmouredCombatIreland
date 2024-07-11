@@ -6,8 +6,8 @@
   "sourceRoot": "apps/ui/src",
   "tags": [],
   "targets": {
-    "apps/build": {
-      "executor": "@angular-devkit/apps/build-angular:browser",
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
       "outputs": [
         "{options.outputPath}"
       ],
@@ -46,7 +46,7 @@
           "outputHashing": "all"
         },
         "development": {
-          "apps/buildOptimizer": false,
+          "buildOptimizer": false,
           "optimization": false,
           "vendorChunk": true,
           "extractLicenses": false,
@@ -57,34 +57,34 @@
       "defaultConfiguration": "production"
     },
     "serve": {
-      "executor": "@angular-devkit/apps/build-angular:dev-server",
+      "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "apps/buildTarget": "ui:apps/build:production"
+          "buildTarget": "ui:build:production"
         },
         "development": {
-          "apps/buildTarget": "ui:apps/build:development"
+          "buildTarget": "ui:build:development"
         }
       },
       "defaultConfiguration": "development"
     },
     "extract-i18n": {
-      "executor": "@angular-devkit/apps/build-angular:extract-i18n",
+      "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "apps/buildTarget": "ui:apps/build"
+        "buildTarget": "ui:build"
       }
     },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "apps/buildTarget": "ui:apps/build"
+        "buildTarget": "ui:build"
       }
     },
     "server": {
       "dependsOn": [
-        "apps/build"
+        "build"
       ],
-      "executor": "@angular-devkit/apps/build-angular:server",
+      "executor": "@angular-devkit/build-angular:server",
       "options": {
         "outputPath": "dist/apps/ui/server",
         "main": "apps/ui/server.ts",
@@ -96,7 +96,7 @@
           "outputHashing": "media"
         },
         "development": {
-          "apps/buildOptimizer": false,
+          "buildOptimizer": false,
           "optimization": false,
           "sourceMap": true,
           "extractLicenses": false,
@@ -106,21 +106,21 @@
       "defaultConfiguration": "production"
     },
     "serve-ssr": {
-      "executor": "@angular-devkit/apps/build-angular:ssr-dev-server",
+      "executor": "@angular-devkit/build-angular:ssr-dev-server",
       "configurations": {
         "development": {
-          "browserTarget": "ui:apps/build:development",
+          "browserTarget": "ui:build:development",
           "serverTarget": "ui:server:development"
         },
         "production": {
-          "browserTarget": "ui:apps/build:production",
+          "browserTarget": "ui:build:production",
           "serverTarget": "ui:server:production"
         }
       },
       "defaultConfiguration": "development"
     },
     "prerender": {
-      "executor": "@angular-devkit/apps/build-angular:prerender",
+      "executor": "@angular-devkit/build-angular:prerender",
       "options": {
         "routes": [
           "/"
@@ -128,11 +128,11 @@
       },
       "configurations": {
         "development": {
-          "browserTarget": "ui:apps/build:development",
+          "browserTarget": "ui:build:development",
           "serverTarget": "ui:server:development"
         },
         "production": {
-          "browserTarget": "ui:apps/build:production",
+          "browserTarget": "ui:build:production",
           "serverTarget": "ui:server:production"
         }
       },
