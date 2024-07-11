@@ -1,0 +1,26 @@
+.container {
+    position: 'relative';
+    height: '80px';
+    width: '80px';
+    font-size: '1rem';
+}
+
+.shield {
+    height: '80px';
+    width: '80px';
+    position: 'absolute';
+}
+
+.sword {
+    height: '80px';
+    width: '80px';
+    position: 'absolute';
+    z-index: 2;
+}
+
+.icon-style {
+    // fontSize: `${parseInt(props.height as string) / 2.5}px`,
+    font-size: '1rem';
+    z-index: 10;
+    color: 'white';
+}
